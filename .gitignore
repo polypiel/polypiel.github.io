@@ -1,3 +1,4 @@
 _build/
-.sublime-project$
-.sublime-workspace$
+*.sublime-project
+*.sublime-workspace
+.sass-cache/

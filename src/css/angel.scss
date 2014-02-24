@@ -180,6 +180,22 @@ article {
 	-moz-border-radius: 0.5rem;
 }
 
+.social-links {
+	a {
+		margin: 0.25rem;
+		color: black;
+		text-decoration: none;
+	}
+	a:first-child {
+		margin-left: 0;
+	}
+	a:last-child {
+		margin-right: 0;
+	}
+	a:hover {
+		color: $blue;
+	}
+}
 /* HEADER */
 #page-header {
 	background-color: $orangish;

@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<article id="content-div">
+  <header class="section-header">
+    <h1>CV</h1>
+  </header>
+
+  <div>
+    {{site.data.cv.statement}}
+
+    {% for section in site.data.cv.sections %}
+    <div>
+      <h3 class="cv-section">{{section.name}}</h3>
+
+      {% for entry in section.entries %}
+      <div class="cv-entry">
+        <div class="cv-date">
+          <div>{{entry.start}}{% if entry.end %} - {{entry.end}}{% endif %}</div>
+          {% if entry.tags %}
+          <div class="cv-tagbox">
+            {% for tag in entry.tags %}
+            <span class="tag">{{tag}}</span><br/>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="cv-right">
+          <div class="cv-right-inner">
+            <header class="cv-entry-header">
+              <span class="cv-role">{{entry.role}}</span>{% if entry.company %}<span>, {% if entry.company.url %}<a href="{{entry.company.url}}" target="_blank">{{entry.company.name}}</a>{% else %}{{entry.company.name}}{% endif %}{% if entry.company.location %} - {{entry.company.location}}{% endif %}</span>{% endif %}.
+            </header>
+
+            {{entry.desc}}
+
+            {% if entry.projects %}
+            <p>Projects:<p/>
+            <ul>
+              {% for project in entry.projects %}
+              <li>
+                {{project.desc}}<br/>
+                {% for link in project.links %}
+                  <a href="{{link.url}}">{{link.name}}</a>
+                {% endfor %}
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if entry.achievements %}
+            <p>Key achievements:</p>
+            <ul>
+              {% for achievement in entry.achievements %}
+              <li>{{achievement}}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if entry.url %}
+            <a href="{{entry.url}}">{{entry.url}}</a>
+            {% endif %}
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+  </div>
+</article><!-- #content-div -->

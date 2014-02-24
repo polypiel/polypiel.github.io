@@ -150,6 +150,17 @@ article li:before {
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem; }
 
+.social-links a {
+  margin: 0.25rem;
+  color: black;
+  text-decoration: none; }
+.social-links a:first-child {
+  margin-left: 0; }
+.social-links a:last-child {
+  margin-right: 0; }
+.social-links a:hover {
+  color: #32a8e5; }
+
 /* HEADER */
 #page-header {
   background-color: #d15136; }
