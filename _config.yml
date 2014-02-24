@@ -1,0 +1,3 @@
+source: ./src
+destination: ./_build
+exclude: [angel.scss]

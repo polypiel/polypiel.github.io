@@ -1,0 +1,126 @@
+---
+  statement: "<p><strong>Software developer</strong> with five years of experience. Currently, I am specialized in <strong>web</strong> development, but also I have worked in R&D projects related with Model Driven Development. Due to my career I master <strong>Java</strong>, but I am keen on other topics such as HTML5, dynamic languages, usability or big data.</p>"
+  sections:
+    -
+      name: "Work Experience"
+      entries:
+        -
+          start: "Oct 2009"
+          end: "Aug 2012"
+          role: "Analyst-developer"
+          company:
+            name: "CYUM"
+            url: "http://www.cyum.es/"
+            location: "Murcia, Spain"
+          tags:
+            -  "Spring"
+            -  "JSF"
+            -  "Wicket"
+            -  "Hibernate"
+            -  "MySQL"
+            -  "Oracle"
+            -  "web-services"
+          desc: "<p>Development of Java Web applications, in which I was involved in the whole development cycle. From analysis to delivery; including data base design, coding, front-end, testing, profiling and documentation.</p>"
+          projects:
+            -
+              desc: "Booking portal for the touristic area of Mar Menor area."
+              links:
+                -
+                  name: "enmarmenor.com"
+                  url: "http://www.enmarmenor.com"
+            -
+              desc: "E-Invoicing web-app for Lorca City Hall (Murcia, Spain)."
+            -
+              desc: "Web-app for the analysis of the IT of an organization. This system is used every year by all Spanish universities."
+              links:
+                -
+                  name: "kti.um.es"
+                  url: "http://kti.um.es"
+                -
+                  name: "source code"
+                  url: "https://forja.rediris.es/projects/kti/"
+            -
+              desc: "Job portal for the Employment Service of Region of Murcia. It features the support of video-curriculum."
+          achievements:
+            -  "I introduced some technologies and tools for improving the working process (e.g. Maven, Findbugs, logging frameworks...)."
+            -  "I created a wiki to document projects, to write down best practices..."
+            -  "I personally proposed and assessed the change of the web-app framework (Wicket over JSF)."
+        -
+          start: "Oct 2007"
+          end: "Aprl 2009"
+          role: "Analyst-developer"
+          company:
+            name: "Push the Button"
+            location: "Murcia, Spain"
+          tags:
+            -  "plug-ins"
+            -  "Eclipse"
+            -  "ontologies"
+            -  "ZK"
+            -  "Hibernate"
+          desc: "<p>I was part of a start-up whose aim was the development of applications generator. Using an information system (based on ontologies), business processes and GUI definitions; a web environment was produced. Also the data base scheme and access layer was generated.<p/><p>Some of my tasks included:</p><ul><li>The analysis of some modules.</li><li>Eclipse plug-in programming.</li><li>A CRUD generator that given a model entity created the process and GUI definitions for basic operations.</li></ul>"
+          achievements:
+            -  "I pro-actively decided to polish the usability of both Eclipse plug-in and the generated web-apps."
+        -
+          start: "Jan 2007"
+          end: "Oct 2007"
+          role: "Analyst-developer"
+          company:
+            name: "CENTIC"
+            url: "http://www.centic.es/"
+            location: "Murcia, Spain"
+          tags:
+            -  "DSL"
+            -  "Eclipse"
+            -  "EMF"
+            -  "GMF"
+          desc: "Main developer of a project intended to ease the development of mobile web-apps using MDD (Model Driven Development) as paradigm. Specifically, I produced a visual DSL and a code generator using the Eclipse Modeling Tools."
+          achievements:
+            -  "As the development was quicker than it was expected I also developed a Eclipse plug-in to support other parts of the development (wizards, compiler integration...)."
+    -
+      name: "Education"
+      entries:
+        -
+          start: "Sept 2001"
+          end: "Jun 2007"
+          role: "BS, Computer Science Engineering"
+          company:
+            name: "University of Murcia"
+            location: "Spain"
+          desc: "A 5-year degree covering all areas of computation (computer architecture, data bases, software engineering, artificial intelligence, networking...). The last year I specialized in Software Engineering."
+    -
+      name: "Courses"
+      entries:
+        -
+          start: "Sep 2012"
+          role: "Functional Programming Principles in Scala"
+          company:
+            name: "École Polytechnique Fédérale de Lausanne"
+          url: "https://www.coursera.org/course/progfun"
+          tags:
+            -  "scala"
+            -  "functional programming"
+        -
+          start: "May 2013"
+          role: "Introduction to Data Science"
+          company:
+            name: "University of Washington"
+          url: "https://www.coursera.org/course/datasci"
+          tags:
+            -  "big data"
+            -  "map-reduce"
+        -
+          start: "Sep 2013"
+          role: "Computing for Data Analysis"
+          company:
+            name: "John Hopkins University"
+          url: "https://www.coursera.org/course/compdata"
+          tags:
+            -  "data analysis"
+            -  "R"
+        -
+          start: "Ene 2014"
+          role: "Software Testing"
+          url: "http.//www.udacity.com/course/cs258"
+          tags:
+            -  "testing"

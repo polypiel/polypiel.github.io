@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Angel Calvo's Website</title>
+		<!-- CSS -->
+		<link href="css/normalize.css" rel="stylesheet" />
+		<link href="css/angel.css" rel="stylesheet" />
+		<link href="css/animate-custom.css" rel="stylesheet" />
+		<link href="css/lightbox.css" rel="stylesheet" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+		<link type="text/plain" rel="author" href="humans.txt" />
+	</head>
+
+	<body>
+		<div id="body-div">
+			<header id="page-header">
+				<div class="header-body">
+					<div id="profile-div">
+						<img class="profile-img" src="images/profile.jpg" alt="Profile photo"/>
+					</div>
+
+					<div id="title-div">
+						<h1><a href="index.html" data-nav="index">Angel Calvo</a></h1>
+						<span class="subtitle">Developer</span>
+					</div>
+
+					<nav id="main-nav"><ul class="nav">
+						<li><a href="projects.html" data-nav="projects" title="See my personal projects">Projects</a></li>
+						<li><a href="about.html" data-nav="about" title="Know more about me">About Me</a></li>
+						<li><a href="contact.php" data-nav="contact" title="And contact me">Contact</a></li>
+					</ul></nav>
+				</div>
+			</header>
+
+			<section id="content">
+				<div id="container-div" class="header-body">
+					{{ content }}
+				</div>
+
+				<footer id="footer">
+					<div class="footer-inner">
+						2014. Angel Calvo.<br/>
+						<nav><ul class="footer-nav">
+							<li><a href="index.html" data-nav title="Home">Home</a></li>
+							<li><a href="projects.html" data-nav title="See my personal projects">Projects</a></li>
+							<li><a href="about.html" data-nav title="Know more about me">About Me</a></li>
+							<li><a href="contact.php" data-nav title="And contact me">Contact</a></li>
+						</ul></nav>
+					</div>
+				</footer>
+			</section>
+
+
+		</div>
+
+		<!-- tmpls -->
+		{% include project-tmpl.html %}
+		{% include projects-tmpl.html %}
+
+		<!-- scripts -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/simplespi.js"></script>
+		<script type="text/javascript" src="js/handlebars-v1.3.0.min.js"></script>
+		<script type="text/javascript" src="js/angel.js"></script>
+		<script type="text/javascript" src="projects.json"></script>
+		<script type="text/javascript" src="js/lightbox-2.6.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				Angel.init({
+					projects: {map: projects, seq: active_projects},
+					container: $('#container-div'),
+					toLoad: '#content-div',
+					menu: $('.nav a')
+				});
+			});
+		</script>
+	</body>
+</html>

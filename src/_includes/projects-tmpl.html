@@ -1,0 +1,23 @@
+{% raw %}
+<script id="projects-tmpl" type="text/x-handlebars-template">
+	<div class="projects-grid">
+	{{#each projects}}
+		<div class="project-entry">
+			<a href="project.html?p={{id}}" data-nav>
+				<img src="images/projects/{{id}}-thumb.png" alt="{{name}} screenshot" />
+			</a>
+			<br/>
+			<div>
+				<h2 class="project-title">
+					<a href="project.html?p={{id}}" data-nav>{{name}}</a>
+				</h2>
+				<p>{{desc}}</p>
+			</div>
+			<div class="project-tags">
+				{{#each tags}}<span class="tag">{{this}}</span>{{/each}}
+			</div>
+		</div>
+	{{/each}}
+	</div>
+</script>
+{% endraw %}
