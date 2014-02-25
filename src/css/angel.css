@@ -288,7 +288,7 @@ article li:before {
   margin: 2rem 0; }
 
 .project-entry {
-  margin-bottom: 3rem;
+  margin: 0 0.5rem 1rem 0.5rem;
   padding: 0.5rem;
   max-width: 250px;
   background-color: white;
@@ -297,6 +297,24 @@ article li:before {
   -webkit-border-radius: 3px; }
   .project-entry img {
     width: 100%; }
+
+/* Grid */
+.projects-grid[data-columns]::before {
+  content: '3 .column.size-1of3'; }
+
+/* These are the classes that are going to be applied: */
+.column {
+  float: left; }
+
+.size-1of3 {
+  width: 33.333%; }
+
+/* Also, don't forget to add this: */
+[data-columns]::before {
+  position: absolute;
+  right: 9999em;
+  bottom: 9999em;
+  visibility: hidden; }
 
 .project-title {
   font-weight: bold;

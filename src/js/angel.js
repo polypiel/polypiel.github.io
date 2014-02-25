@@ -85,6 +85,7 @@ var Angel = {
 			}
 		});
 
+
 		// Active page
 		self.config.menu.each(function(index, elem) {
 			var jelem = $(elem);
@@ -98,6 +99,8 @@ var Angel = {
 			}
 		});
 
+		// Grid
+		salvattore.register_grid($('.projects-grid')[0]);
 	},
 
 	preNavigate: function(event, url) {

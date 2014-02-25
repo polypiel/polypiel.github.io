@@ -53,11 +53,13 @@ $orangish: #d15136;
 	#title-div {
 		margin: 0.5rem 0 2rem 0;
 	}
+		/*
 	.projects-grid {
 		column-count: 3;
 		-moz-column-count: 3;
 		-webkit-column-count: 3;
 	}
+		*/
 }
 
 /* One column */
@@ -91,11 +93,13 @@ $orangish: #d15136;
 			margin-left: -3rem;
 		}
 	}
+	/*
 	.projects-grid {
 		column-count: 2;
 		-moz-column-count: 2;
 		-webkit-column-count: 2;
 	}
+	*/
 }
 .t-break {
 	display: none;
@@ -109,11 +113,13 @@ $orangish: #d15136;
 	.t-break {
 		display: none;
 	}
+	/*
 	.projects-grid {
 		column-count: 1;
 		-moz-column-count: 1;
 		-webkit-column-count: 1;
 	}
+	*/
 }
 
 /* GENERAL STYLES */
@@ -348,7 +354,7 @@ article {
 	margin: 2rem 0;
 }
 .project-entry {
-	margin-bottom: 3rem;
+	margin: 0 0.5rem 1rem 0.5rem;
 	padding: 0.5rem;
 	max-width: 250px;
 	img {
@@ -359,6 +365,22 @@ article {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
+
+/* Grid */
+.projects-grid[data-columns]::before {
+	content: '3 .column.size-1of3';
+}
+/* These are the classes that are going to be applied: */
+.column { float: left;}
+.size-1of3 { width: 33.333%; }
+/* Also, don't forget to add this: */
+[data-columns]::before {
+    position: absolute;
+    right: 9999em;
+    bottom: 9999em;
+    visibility: hidden;
+}
+
 .project-title {
 	font-weight: bold;
 	margin-bottom: 0;

@@ -1,6 +1,6 @@
 {% raw %}
 <script id="projects-tmpl" type="text/x-handlebars-template">
-	<div class="projects-grid">
+	<div class="projects-grid" data-columns>
 	{{#each projects}}
 		<div class="project-entry">
 			<a href="project.html?p={{id}}" data-nav>
@@ -19,5 +19,6 @@
 		</div>
 	{{/each}}
 	</div>
+	<div style="clear: both;"></div>
 </script>
 {% endraw %}
