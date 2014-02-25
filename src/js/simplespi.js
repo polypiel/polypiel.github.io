@@ -101,7 +101,6 @@
 
       // updates browser url
       var url_str = self.url_2_str(url);
-      console.log(url_str);
       history.pushState(url_str, "", url_str);
     },
 
