@@ -105,7 +105,8 @@
     },
 
     isCurrent: function(url) {
-      if(url.page === window.location.pathname) {
+      var cpage = window.location.pathname.substr(1);
+      if(url.page === cpage) {
         // TODO comparar parameters
         /*
         if(!url.page_params || url.page_params === window.location.search.substr() {

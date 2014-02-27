@@ -100,7 +100,10 @@ var Angel = {
 		});
 
 		// Grid
-		salvattore.register_grid($('.projects-grid')[0]);
+		var projects_grid = $('.projects-grid')[0];
+		if(projects_grid) {
+			salvattore.register_grid(projects_grid);
+		}
 	},
 
 	preNavigate: function(event, url) {
