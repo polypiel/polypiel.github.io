@@ -86,11 +86,13 @@
 		<script type="text/javascript" src="js/simplespi.js"></script>
 		<script type="text/javascript" src="js/handlebars-v1.3.0.min.js"></script>
 		<script type="text/javascript" src="js/angel.js"></script>
-		<script type="text/javascript" src="projects.json"></script>
 		<script type="text/javascript" src="js/lightbox-2.6.min.js"></script>
 		<script type="text/javascript" src="js/salvattore.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
+
+				{% include projects-data.js %}
+
 				Angel.init({
 					projects: {map: projects, seq: active_projects},
 					container: $('#container-div'),

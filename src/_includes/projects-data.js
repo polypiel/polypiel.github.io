@@ -1,7 +1,7 @@
 /**
  * Array of active projects
  */
-active_projects = ["casataller", "dlp", "fartfighter", "damian", "dblog", "llf", "sp", "kde"];
+active_projects = ["casataller", "dlp", "fartfighter", "damian", "dblog", "llf", "sp", "kde", "angel"];
 
 /**
  * Each project has the following attributes:
@@ -152,10 +152,11 @@ projects = {
 		]
 	},
 	"kde": {
-		"name": "Some widgets for KDE",
+		"name": "KDE Widgets",
 		"category": "widget",
 		"date": "2008",
-		"desc": "",
+		"desc": "Some widgets for KDE desktop",
+		"long_desc": [],
 		"tags": ["widget", "kde", "superkaramba"],
 		"links": [
 			{"url": "http://kde-look.org/content/show.php/Last.sk?content=51167", "text": "Last.sk Page"},
@@ -166,6 +167,17 @@ projects = {
 		"images": [
 			{"img": "sk01.png","title": "Last.sk screenshot"},
 			{"img": "sk02.png", "title": "Last.sk screenshot"}
+		]
+	},
+	"angel": {
+		"name": "My personal web",
+		"category": "web",
+		"date": "Feb 2014",
+		"desc": "This web.",
+		"long_desc": ["This is meta."],
+		"tags": ["responsive", "jekyll", "handlebars"],
+		"links": [
+			{"url": "https://github.com/polypiel/web", "text": "Github", "type": "github"}
 		]
 	}
 }
