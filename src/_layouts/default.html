@@ -2,6 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=480"/>
+
 		<title>Angel Calvo's Website</title>
 		<!-- CSS -->
 		<link href="css/normalize.css" rel="stylesheet" />
@@ -27,7 +29,13 @@
 					</div>
 
 					<div id="title-div">
-						<h1><a href="index.html" data-nav>Angel Calvo</a></h1>
+						<h1>
+							{% if page.path == "index.html" %}
+							Angel Calvo
+							{% else %}
+							<a href="index.html" data-nav title="Home">Angel Calvo</a>
+							{% endif %}
+						</h1>
 						<span class="subtitle">Developer</span><br/>
 						<div class="social-links">
 							<a href="https://github.com/polypiel" target="_blank" title="Github profile"><i class="fa fa-github"></i></a>
@@ -35,7 +43,8 @@
 							<a href="mailto:hi@angelcalvo.com" target="_blank" title="Write me!"><i class="fa fa-envelope"></i></a>
 						</div>
 					</div>
-					<div style="clear: both;" />
+
+					<div style="clear: both;" ></div>
 
 					<nav id="main-nav"><ul class="nav">
 						<li><a href="projects.html" data-nav title="See my personal projects">Projects</a></li>

@@ -17,19 +17,19 @@ layout: default
       <div class="cv-entry">
         <div class="cv-date">
           <div>{{entry.start}}{% if entry.end %} - {{entry.end}}{% endif %}</div>
-          {% if entry.tags %}
-          <div class="cv-tagbox">
-            {% for tag in entry.tags %}
-            <span class="tag">{{tag}}</span><br/>
-            {% endfor %}
-          </div>
-          {% endif %}
         </div>
 
         <div class="cv-right">
           <div class="cv-right-inner">
             <header class="cv-entry-header">
               <span class="cv-role">{{entry.role}}</span>{% if entry.company %}<span>, {% if entry.company.url %}<a href="{{entry.company.url}}" target="_blank">{{entry.company.name}}</a>{% else %}{{entry.company.name}}{% endif %}{% if entry.company.location %} - {{entry.company.location}}{% endif %}</span>{% endif %}.
+            {% if entry.tags %}
+            <ul class="cv-tagbox">
+              {% for tag in entry.tags %}
+              <li class="tag">{{tag}}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
             </header>
 
             {{entry.desc}}

@@ -20,7 +20,7 @@
             -  "MySQL"
             -  "Oracle"
             -  "web-services"
-          desc: "<p>Development of Java Web applications, in which I was involved in the whole development cycle. From analysis to delivery; including data base design, coding, front-end, testing, profiling and documentation.</p>"
+          desc: "<p>Development of Java web applications, in which I was involved in the whole development cycle. From analysis to delivery; including data base design, coding, front-end, testing, profiling and documentation.</p>"
           projects:
             -
               desc: "Booking portal for the touristic area of Mar Menor area."
