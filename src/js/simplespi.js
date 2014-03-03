@@ -104,15 +104,23 @@
       history.pushState(url_str, "", url_str);
     },
 
+    /**
+     * Checks if the URL is the current one
+     */
     isCurrent: function(url) {
+      var self = SimpleSPI;
       var cpage = window.location.pathname.substr(1);
       if(url.page === cpage) {
-        // TODO comparar parameters
-        /*
-        if(!url.page_params || url.page_params === window.location.search.substr() {
-          return true;
+        // Compare params
+        var params = self.params_2_map(window.location.search.substr(1));
+        if(params.length != url.params.length) {
+          return false;
         }
-        */
+        for(param in url.params) {
+          if(!params[param] || url.params[param] != params[param]) {
+            return false;
+          }
+        }
         return true;
       }
       return false
@@ -129,19 +137,22 @@
       return self.str_2_url3(parts[0], parts[1], search);
     },
     str_2_url3: function(page, ref, params) {
+      var self = SimpleSPI;
       var url = {"page": page};
-      if(ref) { url.ref = ref; }
-      if(params) {
-        url.params = {};
-        var params_a = params.split('&');
-        for(var i = 0; i < params_a.length; ++i) {
-          var p = params_a[i].split('=');
-          if (p.length == 2) {
-            url.params[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-          }
+      url.ref = ref;
+      url.params = self.params_2_map(params);
+      return url;
+    },
+    params_2_map: function(params) {
+      var params_map = {};
+      var params_a = params ? params.split('&') : [];
+      for(var i = 0; i < params_a.length; ++i) {
+        var p = params_a[i].split('=');
+        if (p.length == 2) {
+          params_map[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
         }
       }
-      return url;
+      return params_map;
     },
     url_2_str: function(obj) {
       var str = obj.page;
