@@ -6,9 +6,10 @@
 
 			<div>
 				<span class="project-date">{{date}}</span>
-				{{#if tags}}
-					{{#each tags}}<span class="tag">{{this}}</span>{{/each}}
-				{{/if}}
+				<span style="margin: 0 0.5rem;" />
+				<span class="cat" title="Category: {{category}}">{{category}}</span>
+				<span style="margin: 0 0.5rem;" />
+				{{#each tags}}<span class="tag">{{this}}</span>{{/each}}
 			</div>
 		</header>
 
@@ -45,7 +46,7 @@
 			{{#if previous}}
 			<li><a href="project.html?p={{previous.id}}" data-nav title="Previous: {{previous.name}}"><i class="fa fa-arrow-circle-left fa-4x"></i></a></li>
 			{{/if}}
-			<li><a href="projects.html" data-nav="projects" title="Projects"><i class="fa fa-arrow-circle-up fa-4x"></i></a></li>
+			<li><a href="projects.html" data-nav title="Projects"><i class="fa fa-arrow-circle-up fa-4x"></i></a></li>
 			{{#if next}}
 			<li><a href="project.html?p={{next.id}}" data-nav title="Next: {{next.name}}"><i class="fa fa-arrow-circle-right fa-4x"></i></a></li>
 			{{/if}}

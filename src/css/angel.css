@@ -419,6 +419,12 @@ article li:before {
   font-weight: bold;
   font-size: 1.4rem; }
 
+.cat {
+  color: #d15136;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: capitalize; }
+
 /* form */
 /*
 label {

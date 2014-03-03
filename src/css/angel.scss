@@ -504,6 +504,12 @@ only screen and (max-device-width: 900px) and (orientation: landscape) {
 	font-weight: bold;
 	font-size: 1.4rem;
 }
+.cat {
+    color: $orangish;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
 
 /* form */
 /*
