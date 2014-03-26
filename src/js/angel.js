@@ -126,5 +126,5 @@ var Angel = {
         m[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
       }
       return m;
-    },
+    }
 };
