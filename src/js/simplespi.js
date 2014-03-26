@@ -1,3 +1,41 @@
+function Url(page, ref, params) {
+  this.page = page;
+  this.ref = ref;
+  this.params = params;
+
+  this.toString = function() {
+    var self = this;
+    var str = this.page;
+    if(this.ref) {
+      str += "#" + this.ref;
+    }
+    if(this.params) {
+      str += Object.keys(this.params).reduce(function(previous, current, index, value) {
+        return previous + (index > 0 ? '&' : '') + current + '=' + self.params[current];
+      }, '?');
+    }
+    return str;
+  };
+
+  this.equals = function(other) {
+    // compare page
+    if(this.page !== other.page) {
+      return false;
+    }
+    // Compare params
+    if(this.params.length !== other.params.length) {
+      return false;
+    }
+    for(param in this.params) {
+      if(!other.params[param] || this.params[param] !== other.params[param]) {
+        return false;
+      }
+    }
+    // equals
+    return true;
+  };
+}
+
 /**
  * Simple library to load pages in a SPI way.
  * It requires jQuery.
@@ -92,23 +130,20 @@
       $(document).trigger(self.BEFORE_NAVIGATE_EVENT, [url]);
 
       self.config.container.load(url.page + ' ' + self.config.toLoad, function() {
-        if(url.ref) {
+        if(url.ref) { // TODO move to client
           $('html, body').animate({ scrollTop: $('#' + url.ref).offset().top }, 500);
         }
         $(document).trigger(self.AFTER_NAVIGATE_EVENT, [url]);
         self.parsePage(url);
-      });
 
-      // updates browser url
-      var url_str = self.url_2_str(url);
-      history.pushState(url_str, "", url_str);
+        // updates browser url
+        var url_str = url.toString();
+        history.pushState(url_str, "", url_str);
+      });
     },
 
-    /**
-     * Checks if the URL is the current one
-     */
     isCurrent: function(url) {
-      var self = SimpleSPI;
+    /*
       var cpage = window.location.pathname.substr(1);
       if(url.page === cpage) {
         // Compare params
@@ -124,8 +159,13 @@
         return true;
       }
       return false
+    */
+      var self = SimpleSPI;
+      var current = self.str_2_url2(window.location.pathname.substr(1), window.location.search.substr(1));
+      return url.equals(current);
     },
 
+    // constructors
     str_2_url: function(str) {
       var self = SimpleSPI;
       var parts = str.split('?');
@@ -138,11 +178,15 @@
     },
     str_2_url3: function(page, ref, params) {
       var self = SimpleSPI;
+      /*
       var url = {"page": page};
       url.ref = ref;
       url.params = self.params_2_map(params);
       return url;
+      */
+      return new Url(page, ref, self.params_2_map(params));
     },
+    // aux method
     params_2_map: function(params) {
       var params_map = {};
       var params_a = params ? params.split('&') : [];
@@ -154,18 +198,20 @@
       }
       return params_map;
     },
-    url_2_str: function(obj) {
-      var str = obj.page;
-      if(obj.ref) {
-        str += "#" + obj.ref;
+    /*
+    url_2_str: function(url) {
+      var str = url.page;
+      if(url.ref) {
+        str += "#" + url.ref;
       }
-      if(obj.params) {
-        str += Object.keys(obj.params).reduce(function(previous, current, index, value) {
-          return previous + (index > 0 ? '&' : '') + current + '=' + obj.params[current];
+      if(url.params && url.params.length > 0) {
+        str += urlect.keys(url.params).reduce(function(previous, current, index, value) {
+          return previous + (index > 0 ? '&' : '') + current + '=' + url.params[current];
         }, '?');
       }
       return str;
     }
+    */
   };
 
 
@@ -175,6 +221,7 @@
   $.fn.sspiNavigable = function(options) {
     options.container = this;
     SimpleSPI.init(options);
-  };
+    return this;
+  }
 
 })( jQuery, window, document );
