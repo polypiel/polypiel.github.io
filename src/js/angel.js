@@ -15,9 +15,7 @@ var Angel = {
 		}
 
 		// Parses page
-    var page = window.location.pathname;
-    var page_params = this.paramsToMap(window.location.search.substr(1));
-    this.initPage({page: page, params: page_params});
+    this.initPage(urlmodule.currentUrl());
 
     // Setups navigation
     this.config.container.sspiNavigable({
@@ -106,6 +104,7 @@ var Angel = {
 		}
 	},
 
+	// sspi events
 	preNavigate: function(event, url) {
 		var self = Angel;
 		self.config.container.removeClass('animated slideInRight');
@@ -115,16 +114,5 @@ var Angel = {
 
 		self.config.container.addClass('animated slideInRight');
 		self.initPage(url);
-	},
-
-	paramsToMap: function(params_str) {
-      var m = {};
-      var params = params_str.split('&');
-      for(var i = 0; i < params.length; ++i) {
-        var p = params[i].split('=');
-        if (p.length != 2) continue;
-        m[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-      }
-      return m;
-    }
+	}
 };
