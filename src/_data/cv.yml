@@ -121,6 +121,12 @@
         -
           start: "Ene 2014"
           role: "Software Testing"
-          url: "http.//www.udacity.com/course/cs258"
+          url: "http://www.udacity.com/course/cs258"
           tags:
             -  "testing"
+        -
+          start: "Mar 2014"
+          role: "MongoDB for Developers"
+          url: "https://education.mongodb.com/courses/10gen/M101P/2014 February/about"
+          tags:
+            -  "mongodb"
