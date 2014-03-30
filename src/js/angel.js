@@ -102,6 +102,9 @@ var Angel = {
 		if(projects_grid) {
 			salvattore.register_grid(projects_grid);
 		}
+
+		// Magnific Popup
+		$('.project-photos').magnificPopup({ delegate: 'a', type: 'image', gallery:{enabled:true} });
 	},
 
 	// sspi events
