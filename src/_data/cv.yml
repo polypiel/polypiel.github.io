@@ -58,7 +58,7 @@
             -  "ontologies"
             -  "ZK"
             -  "Hibernate"
-          desc: "<p>I was part of a start-up whose aim was the development of applications generator. Using an information system (based on ontologies), business processes and GUI definitions; a web environment was produced. Also the data base scheme and access layer was generated.<p/><p>Some of my tasks included:</p><ul><li>The analysis of some modules.</li><li>Eclipse plug-in programming.</li><li>A CRUD generator that given a model entity created the process and GUI definitions for basic operations.</li></ul>"
+          desc: '<p>I was part of a start-up whose aim was the development of applications generator. Using an information system (based on ontologies), business processes and GUI definitions; a web environment was produced. Also the data base scheme and access layer was generated.<p/><p>Some of my tasks included:</p><ul class="bullet-list"><li>The analysis of some modules.</li><li>Eclipse plug-in programming.</li><li>A CRUD generator that given a model entity created the process and GUI definitions for basic operations.</li></ul>'
           achievements:
             -  "I pro-actively decided to polish the usability of both Eclipse plug-in and the generated web-apps."
         -
