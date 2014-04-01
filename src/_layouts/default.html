@@ -25,17 +25,11 @@
 			<header id="page-header">
 				<div class="header-body">
 					<div id="profile-div">
-						<img class="profile-img" src="images/profile.jpg" alt="Profile photo"/>
+						<a href="index.html" data-nav title="Home"><img class="profile-img" src="images/profile.jpg" alt="Profile photo"/></a>
 					</div>
 
 					<div id="title-div">
-						<h1>
-							{% if page.path == "index.html" %}
-							Angel Calvo
-							{% else %}
-							<a href="index.html" data-nav title="Home">Angel Calvo</a>
-							{% endif %}
-						</h1>
+						<h1><a href="index.html" data-nav title="Home">Angel Calvo</a></h1>
 						<span class="subtitle">Developer</span><br/>
 						<ul class="social-links social-links-small">
 							<li><a href="https://github.com/polypiel" target="_blank" title="Github profile"><i class="fa fa-github"></i></a></li>
