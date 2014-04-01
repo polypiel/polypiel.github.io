@@ -75,26 +75,6 @@
 @media all and (max-device-width: 1024px) {
   html {
     font-size: 100%; } }
-/*
-.t-break {
-	display: none;
-}
-*/
-/* One column (small) */
-/*
-@media all and (max-width: $threshold_mobile - 1),
-all and (max-device-width: $threshold_mobile - 1) {
-	#content-div {
-	  margin-left: 0;
-	  .section-header {
-			margin-left: 0;
-		}
-	}
-	.t-break {
-		display: none;
-	}
-}
-*/
 /* GENERAL STYLES */
 html {
   font-size: 62.5%; }
@@ -138,14 +118,16 @@ li {
 ul {
   padding-left: 1.5rem; }
 
-article li {
-  list-style: none;
-  padding-left: 1.5rem; }
-article li:before {
-  float: left;
-  margin-left: -1.5rem;
-  content: '»';
-  font-weight: bold; }
+.bullet-list {
+  list-style: none; }
+  .bullet-list li {
+    list-style: nonarticlee;
+    padding-left: 1.5rem; }
+  .bullet-list li:before {
+    float: left;
+    margin-left: -1.5rem;
+    content: '»';
+    font-weight: bold; }
 
 .summary {
   font-size: 2.2rem; }
@@ -159,16 +141,31 @@ article li:before {
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem; }
 
-.social-links a {
-  margin: 0.25rem;
-  color: black;
-  text-decoration: none; }
-.social-links a:first-child {
-  margin-left: 0; }
-.social-links a:last-child {
-  margin-right: 0; }
-.social-links a:hover {
-  color: #32a8e5; }
+.social-links {
+  list-style: none;
+  padding-left: 0; }
+  .social-links li {
+    display: inline-block;
+    margin: 0 0.5rem; }
+  .social-links li:first-child {
+    margin-left: 0; }
+  .social-links li:last-child {
+    margin-right: 0; }
+  .social-links a {
+    color: black;
+    text-decoration: none; }
+  .social-links a:hover {
+    color: #32a8e5; }
+
+.social-links-small {
+  margin: 0; }
+  .social-links-small li {
+    margin: 0 0.5rem; }
+
+.social-links-large {
+  margin: 2rem 0 0 0; }
+  .social-links-large li {
+    margin: 0 2rem; }
 
 /* HEADER */
 #page-header {
@@ -334,7 +331,7 @@ article li:before {
 @media screen and (min-width: 901px) {
   .projects-grid[data-columns]::before {
     content: '3 .column.size-1of3'; } }
-/* These are the classes that are going to be applied: */
+/* Project grid */
 .column {
   float: left; }
 
@@ -391,8 +388,6 @@ article li:before {
     margin-left: 0; }
   .project-nav ul li:last-child {
     margin-right: 0; }
-  .project-nav ul li:before {
-    content: ""; }
   .project-nav ul a {
     text-decoration: none; }
 

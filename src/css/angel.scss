@@ -101,27 +101,6 @@ all and (min-device-width: $threshold_mobile + 1) and (max-device-width: $thresh
 	html { font-size: 100%; }
 }
 
-/*
-.t-break {
-	display: none;
-}
-*/
-/* One column (small) */
-/*
-@media all and (max-width: $threshold_mobile - 1),
-all and (max-device-width: $threshold_mobile - 1) {
-	#content-div {
-	  margin-left: 0;
-	  .section-header {
-			margin-left: 0;
-		}
-	}
-	.t-break {
-		display: none;
-	}
-}
-*/
-
 /* GENERAL STYLES */
 
 html {
@@ -167,9 +146,10 @@ li {
 ul {
 	padding-left: 1.5rem;
 }
-article {
+.bullet-list {
+	list-style: none;
 	li {
-		list-style: none;
+		list-style: nonarticlee;
 		padding-left: 1.5rem;
 	}
 	li:before {
@@ -196,21 +176,39 @@ article {
 }
 
 .social-links {
-	a {
-		margin: 0.25rem;
-		color: black;
-		text-decoration: none;
+	list-style: none;
+	padding-left: 0;
+	li {
+		display: inline-block;
+		margin: 0 0.5rem;
 	}
-	a:first-child {
+	li:first-child {
 		margin-left: 0;
 	}
-	a:last-child {
+	li:last-child {
 		margin-right: 0;
+	}
+	a {
+		color: black;
+		text-decoration: none;
 	}
 	a:hover {
 		color: $blue;
 	}
 }
+.social-links-small {
+	margin: 0;
+	li {
+		margin: 0 0.5rem;
+	}
+}
+.social-links-large {
+	margin: 2rem 0 0 0;
+	li {
+		margin: 0 2rem;
+	}
+}
+
 /* HEADER */
 #page-header {
 	background-color: $orangish;
@@ -415,7 +413,7 @@ only screen and (max-device-width: 900px) and (orientation: landscape) {
 		content: '3 .column.size-1of3';
 	}
 }
-/* These are the classes that are going to be applied: */
+/* Project grid */
 .column { float: left;}
 .size-1of1 { width: 100%; }
 .size-1of2 { width: 50%; }
@@ -468,9 +466,6 @@ only screen and (max-device-width: 900px) and (orientation: landscape) {
   }
   li:last-child {
   	margin-right: 0;
-  }
-  li:before {
-  	content: "";
   }
   a {
 		text-decoration: none;
