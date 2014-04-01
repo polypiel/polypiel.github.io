@@ -22,7 +22,7 @@ layout: default
         <div class="cv-right">
           <div class="cv-right-inner">
             <header class="cv-entry-header">
-              <span class="cv-role">{{entry.role}}</span>{% if entry.company %}<span>, {% if entry.company.url %}<a href="{{entry.company.url}}" target="_blank">{{entry.company.name}}</a>{% else %}{{entry.company.name}}{% endif %}{% if entry.company.location %} - {{entry.company.location}}{% endif %}</span>{% endif %}.
+            {% if entry.url %}<a href="{{entry.url}}" class="cv-role" target="_blank">{{entry.role}}</a>{% else %}<span class="cv-role">{{entry.role}}</span>{% endif %}{% if entry.company %}<span>, {% if entry.company.url %}<a href="{{entry.company.url}}" target="_blank">{{entry.company.name}}</a>{% else %}{{entry.company.name}}{% endif %}{% if entry.company.location %} - {{entry.company.location}}{% endif %}</span>{% endif %}.
             {% if entry.tags %}
             <ul class="cv-tagbox">
               {% for tag in entry.tags %}
@@ -36,7 +36,7 @@ layout: default
 
             {% if entry.projects %}
             <p>Projects:<p/>
-            <ul>
+            <ul class="bullet-list">
               {% for project in entry.projects %}
               <li>
                 {{project.desc}}<br/>
@@ -50,15 +50,11 @@ layout: default
 
             {% if entry.achievements %}
             <p>Key achievements:</p>
-            <ul>
+            <ul class="bullet-list">
               {% for achievement in entry.achievements %}
               <li>{{achievement}}</li>
               {% endfor %}
             </ul>
-            {% endif %}
-
-            {% if entry.url %}
-            <a href="{{entry.url}}">{{entry.url}}</a>
             {% endif %}
           </div>
         </div>
