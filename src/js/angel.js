@@ -41,7 +41,7 @@ var Angel = {
 	},
 
 	/**
-	 * @param page Used to set the active page
+	 * @param url Used to set the active page
 	 */
 	initPage: function(url) {
 		var self = Angel;
@@ -108,9 +108,13 @@ var Angel = {
 	},
 
 	// sspi events
-	preNavigate: function(event, url) {
+	preNavigate: function(event, promise, url) {
 		var self = Angel;
+
 		self.config.container.removeClass('animated slideInRight');
+		//self.config.container.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			promise.resolve();
+		//});
 	},
 	postNavigate: function(event, url) {
 		var self = Angel;

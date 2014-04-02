@@ -82,13 +82,24 @@
 
     /**
      * Navigates to the new content
-     * @param new_url page to load
-     * @param params a map with the parameters
+     * @param url page to load
      */
     navigate: function(url) {
       var self = SimpleSPI;
 
-      $(document).trigger(self.BEFORE_NAVIGATE_EVENT, [url]);
+      var navDef = new $.Deferred();
+      navDef.done(function() {
+        self.navigate2(url);
+      });
+      if(self.config.beforeNavigate) {
+        $(document).trigger(self.BEFORE_NAVIGATE_EVENT, [navDef, url]);
+      } else {
+        navDef.resolve();
+      }
+    },
+
+    navigate2: function(url) {
+      var self = SimpleSPI;
 
       self.config.container.load(url.page + ' ' + self.config.toLoad, function() {
         if(url.ref) { // TODO move to client
@@ -178,7 +189,7 @@ var urlmodule = (function() {
   return {
     /** Returns the current url */
     currentUrl: function() {
-      return str_2_url2(window.location.pathname, window.location.search);
+      return str_2_url2(window.location.pathname.substr(1), window.location.search.substr(1));
     },
     /** Converts a string to url */
     str_2_url: function(str) {
