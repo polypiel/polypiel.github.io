@@ -196,7 +196,7 @@ projects = {
 			{"url": "https://github.com/polypiel/web", "text": "Github", "type": "github"}
 		],
 		"images": [
-			{"img": "angel01.png", "title": "Desktop versio"},
+			{"img": "angel01.png", "title": "Desktop version"},
 			{"img": "angel02.png", "title": "Tablet version"},
 			{"img": "angel03.png", "title": "Mobile version"}
 		]
