@@ -1,5 +1,5 @@
 ---
-  statement: "<p><strong>Software developer</strong> with five years of experience. Currently, I am specialized in <strong>web</strong> development, but also I have worked in R&D projects related with Model Driven Development. Due to my career I master <strong>Java</strong>, but I am keen on other topics such as HTML5, dynamic languages, usability or big data.</p>"
+  statement: "<p><strong>Software developer</strong> specialized in <strong>web</strong> development, and the <strong>Java</strong> platform."
   sections:
     -
       name: "Work Experience"
@@ -31,7 +31,7 @@
             -
               desc: "E-Invoicing web-app for Lorca City Hall (Murcia, Spain)."
             -
-              desc: "Web-app for the analysis of the IT of an organization. This system is used every year by all Spanish universities."
+              desc: "Web-app for the analysis of the IT of an organization. This system is used by all Spanish universities."
               links:
                 -
                   name: "kti.um.es"
@@ -40,11 +40,10 @@
                   name: "source code"
                   url: "https://forja.rediris.es/projects/kti/"
             -
-              desc: "Job portal for the Employment Service of Region of Murcia. It features the support of video-curriculum."
+              desc: "Job portal for the Employment Service of Region of Murcia. It features video-curriculum support."
           achievements:
-            -  "I introduced some technologies and tools for improving the working process (e.g. Maven, Findbugs, logging frameworks...)."
+            -  "I introduced some technologies and tools for improving the working process."
             -  "I created a wiki to document projects, to write down best practices..."
-            -  "I personally proposed and assessed the change of the web-app framework (Wicket over JSF)."
         -
           start: "Oct 2007"
           end: "Apr 2009"
@@ -53,14 +52,13 @@
             name: "Push the Button"
             location: "Murcia, Spain"
           tags:
-            -  "plug-ins"
             -  "Eclipse"
             -  "ontologies"
             -  "ZK"
             -  "Hibernate"
-          desc: '<p>I was part of a start-up whose aim was the development of applications generator. Using an information system (based on ontologies), business processes and GUI definitions; a web environment was produced. Also the data base scheme and access layer was generated.<p/><p>Some of my tasks included:</p><ul class="bullet-list"><li>The analysis of some modules.</li><li>Eclipse plug-in programming.</li><li>A CRUD generator that given a model entity created the process and GUI definitions for basic operations.</li></ul>'
+          desc: '<p>I was part of a start-up whose aim was the development of applications generator.Some of my tasks included: analysis, Eclipse plug-in programming, a CRUD generator...</p>'
           achievements:
-            -  "I pro-actively decided to polish the usability of both Eclipse plug-in and the generated web-apps."
+            -  "I pro-actively decided to polish up the usability of both Eclipse plug-in and the generated web-apps."
         -
           start: "Jan 2007"
           end: "Oct 2007"
@@ -74,7 +72,7 @@
             -  "Eclipse"
             -  "EMF"
             -  "GMF"
-          desc: "Main developer of a project intended to ease the development of mobile web-apps using MDD (Model Driven Development) as paradigm. Specifically, I produced a visual DSL and a code generator using the Eclipse Modeling Tools."
+          desc: "Main developer of a project intended to ease the development of mobile web-apps using Model Driven Development as paradigm. Specifically, I produced a visual DSL and a code generator using the Eclipse Modeling Tools."
           achievements:
             -  "As the development was quicker than it was expected I also developed a Eclipse plug-in to support other parts of the development (wizards, compiler integration...)."
     -
@@ -87,7 +85,7 @@
           company:
             name: "University of Murcia"
             location: "Spain"
-          desc: "A 5-year degree covering all areas of computation (computer architecture, data bases, software engineering, artificial intelligence, networking...). The last year I specialized in Software Engineering."
+          desc: "A 5-year degree covering all areas of computation. The last year I specialized in Software Engineering."
     -
       name: "Courses"
       entries:
