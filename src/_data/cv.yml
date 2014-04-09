@@ -1,5 +1,5 @@
 ---
-  statement: "<p><strong>Software developer</strong> specialized in <strong>web</strong> development, and the <strong>Java</strong> platform."
+  statement: "<p class='summary'><strong>Software developer</strong> specialized in <strong>web</strong> development, and the <strong>Java</strong> platform."
   sections:
     -
       name: "Work Experience"
