@@ -1,7 +1,7 @@
 /**
  * Array of active projects
  */
-active_projects = ["casataller", "dlp", "fartfighter", "damian", "dblog", "llf", "sp", "kde", "angel"];
+active_projects = ["fairycave", "casataller", "dlp", "fartfighter", "damian", "dblog", "llf", "sp", "kde", "angel"];
 
 /**
  * Each project has the following attributes:
@@ -56,14 +56,17 @@ projects = {
 	"fairycave": {
 		"name": "Fairy Cave",
 		"category": "web",
-		"date": "Mar 2014",
-		"desc": "Web site and shop",
+		"date": "April 2014",
+		"desc": "Fantasy clothing and jewelry website.",
+		"long_desc": [
+			"The site uses Wordpress as CMS with a theme created from scratch. It's also ready for mobiles and tablets.",
+		],
 		"tags": ["wordpress"],
 		"links": [{"url": "http://fairycave.net", "text": "Fairy Cave"} ],
 		"images": [
-			{"img": "images/projects/sp01.png", "thumb": "images/projects/thumb_sp01.png", "title": "Title screen"},
-			{"img": "images/projects/sp02.png", "thumb": "images/projects/thumb_sp02.png", "title": "Options screen"},
-			{"img": "images/projects/sp03.png", "thumb": "images/projects/thumb_sp03.png", "title": "Game"}
+			{"img": "fairycave01.png", "title": ""},
+			{"img": "fairycave02.png", "title": ""},
+			{"img": "fairycave03.png", "title": ""}
 		]
 	},
 
