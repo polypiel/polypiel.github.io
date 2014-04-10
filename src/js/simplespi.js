@@ -122,7 +122,7 @@
     options.container = this;
     SimpleSPI.init(options);
     return this;
-  }
+  };
 
 })( jQuery, window, document );
 

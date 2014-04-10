@@ -53,7 +53,7 @@ var Angel = {
 			var err = false;
 
 			// Loads context
-			var context = {}
+			var context = {};
 			switch (tmpl) {
 
 				case "projects-tmpl":
@@ -111,15 +111,14 @@ var Angel = {
 	preNavigate: function(event, promise, url) {
 		var self = Angel;
 
-		self.config.container.removeClass('animated slideInRight');
-		//self.config.container.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-			promise.resolve();
-		//});
+		self.config.container.removeClass('slideOutLeft slideInRight');
+		promise.resolve();
 	},
+
 	postNavigate: function(event, url) {
 		var self = Angel;
 
-		self.config.container.addClass('animated slideInRight');
+		self.config.container.addClass('slideInRight');
 		self.initPage(url);
 	}
 };
