@@ -70,7 +70,7 @@
 
       e.preventDefault();
 
-      var url = e.data['url'];
+      var url = e.data.url;
       if(!url.equals(urlmodule.currentUrl())) {
         self.navigate(url);
       } else {
@@ -160,13 +160,18 @@ var urlmodule = (function() {
       if(this.params.length !== other.params.length) {
         return false;
       }
-      for(param in this.params) {
+      for(var param in this.params) {
         if(!other.params[param] || this.params[param] !== other.params[param]) {
           return false;
         }
       }
       // equals
       return true;
+    };
+
+    /** Returns if the given param exists */
+    this.hasParam = function(param) {
+      return this.params && this.params[param];
     };
   }
 

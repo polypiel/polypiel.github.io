@@ -435,6 +435,24 @@ only screen and (max-device-width: 900px) and (orientation: landscape) {
 .project-tags {
 	border-top: 1px dotted $pink;
 }
+.filter-div {
+	margin: 2rem 0 1rem;
+}
+.filter-left {
+	background-color: $orangish;
+	border: 1px $orangish solid;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 0 2px;
+  color: $camel;
+}
+.filter-right {
+	border: 1px $orangish solid;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 0 2px;
+}
+
 /* PROJECT */
 .project-photos {
 	border-top: 1px dotted $orangish;
@@ -498,12 +516,21 @@ only screen and (max-device-width: 900px) and (orientation: landscape) {
 	margin: 2px 1px;
 	font-weight: bold;
 	font-size: 1.4rem;
+	a {
+		color: $camel;
+  	text-decoration: none;
+  }
 }
 .cat {
-    color: $orangish;
-    font-weight: bold;
-    font-size: 1.4rem;
-    text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  color: $orangish;
+  a {
+  	color: $orangish;
+  	text-decoration: none;
+  }
+
 }
 
 /* form */

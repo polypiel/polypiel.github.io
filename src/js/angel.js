@@ -1,5 +1,5 @@
 var Angel = {
-	init: function(config) {
+	init: function (config) {
 		this.config = config;
 
 		// Setup Handlebars
@@ -25,29 +25,40 @@ var Angel = {
 		});
 	},
 
-	setupTmpls: function() {
+	setupTmpls: function () {
 		var self = Angel;
 
 		// Registers templates
 		self.config.tmpls = {};
-		$('script[type="text/x-handlebars-template"]').each(function(i, e) {
+		$('script[type="text/x-handlebars-template"]').each(function (i, e) {
 			var elem = $(e);
 			self.config.tmpls[elem.attr('id')] = Handlebars.compile(elem.html());
 		});
 		// Used in project links
-		Handlebars.registerHelper('linkIcon', function(type) {
+		Handlebars.registerHelper('linkIcon', function (type) {
 			return type || "external-link";
+		});
+		// Iterates and filters through projects
+		Handlebars.registerHelper('eachProject', function (context, catFilter, tagFilter, options) {
+		  var ret = "";
+		  for(var i = 0; i < context.length; i++) {
+		  	if((!catFilter || catFilter === context[i].category) &&
+		  		 (!tagFilter || context[i].tags.indexOf(tagFilter) !== -1)) {
+		    	ret = ret + options.fn(context[i]);
+		    }
+		  }
+		  return ret;
 		});
 	},
 
 	/**
 	 * @param url Used to set the active page
 	 */
-	initPage: function(url) {
+	initPage: function (url) {
 		var self = Angel;
 
 		// Templating
-		$('[data-tmpl]').each(function(i, e) {
+		$('[data-tmpl]').each(function (i, e) {
 			var elem = $(e);
 			var tmpl = elem.data('tmpl');
 			var err = false;
@@ -58,11 +69,19 @@ var Angel = {
 
 				case "projects-tmpl":
 					context = {'projects': self.config.projects.seq};
+					if(url.hasParam("c")) {
+						context.catFilter = url.params.c;
+						context.filter = true;
+					}
+					if(url.hasParam("t")) {
+						context.tagFilter = url.params.t;
+						context.filter = true;
+					}
 					break;
 
 				case "project-tmpl":
-					if(url.params && url.params["p"] && self.config.projects.map[url.params["p"]]) {
-						context = self.config.projects.map[url.params["p"]];
+					if(url.hasParam("p") && self.config.projects.map[url.params.p]) {
+						context = self.config.projects.map[url.params.p];
 					} else {
 						err = true;
 					}
@@ -85,7 +104,7 @@ var Angel = {
 
 
 		// Active page
-		self.config.menu.each(function(index, elem) {
+		self.config.menu.each(function (index, elem) {
 			var jelem = $(elem);
 			var href = jelem.attr('href');
 			if(href !== undefined) {
@@ -108,14 +127,14 @@ var Angel = {
 	},
 
 	// sspi events
-	preNavigate: function(event, promise, url) {
+	preNavigate: function (event, promise, url) {
 		var self = Angel;
 
 		self.config.container.removeClass('slideOutLeft slideInRight');
 		promise.resolve();
 	},
 
-	postNavigate: function(event, url) {
+	postNavigate: function (event, url) {
 		var self = Angel;
 
 		self.config.container.addClass('slideInRight');
