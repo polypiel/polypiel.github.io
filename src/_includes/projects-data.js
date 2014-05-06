@@ -15,6 +15,17 @@ active_projects = ["fairycave", "casataller", "dlp", "fartfighter", "damian", "d
  * @images List of images (img, thumb and title)
  */
 projects = {
+	"maktub": {
+		"name": "Maktub Traducciones",
+		"desc": "Profesional traslation services web page",
+		"category": "web",
+		"date": "May 2014",
+		"tags": ["bootstrap", "responsive"],
+		"long_desc": [],
+		"links": [],
+		"images": []
+	},
+
 	"dlp": {
 		"name": "DLP",
 		"desc": "Web site for a business consulting company.",
@@ -61,12 +72,12 @@ projects = {
 		"long_desc": [
 			"The site uses Wordpress as CMS with a theme created from scratch. It's also ready for mobiles and tablets.",
 		],
-		"tags": ["wordpress"],
-		"links": [{"url": "http://fairycave.net", "text": "Fairy Cave"} ],
+		"tags": ["wordpress", "responsive"],
+		"links": [{"url": "http://beta.fairycave.net", "text": "Fairy Cave"} ],
 		"images": [
-			{"img": "fairycave01.png", "title": ""},
-			{"img": "fairycave02.png", "title": ""},
-			{"img": "fairycave03.png", "title": ""}
+			{"img": "fairycave01.png", "title": "Home page"},
+			{"img": "fairycave02.png", "title": "DaWanda shop integration"},
+			{"img": "fairycave03.png", "title": "Mobile view"}
 		]
 	},
 
@@ -126,7 +137,7 @@ projects = {
 		"name": "SuperPalitos",
 		"desc": "A classic paper and pencil game developed in Java.",
 		"category": "game",
-		"tags": ["java", "swing", "networked"],
+		"tags": ["java", "swing"],
 		"date": "2007",
 		"long_desc": [
 			"The game consists in crossing, in turns, any number of sticks in a row. The player who gets the last stick loses.",
