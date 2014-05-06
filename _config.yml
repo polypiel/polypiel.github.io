@@ -1,3 +1,4 @@
 source: ./src
 destination: ./_build
 exclude: [angel.scss]
+permalink: /blog/:title.html
