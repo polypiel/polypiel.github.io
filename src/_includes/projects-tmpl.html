@@ -3,18 +3,12 @@
 	{{#if filter}}
 	<div class="filter-div">
 		<span>Filtering projects by: </span>
-		{{#if catFilter}}
-		<span class="filter-left" title="'{{catFilter}}' category">
-			<i class="fa fa-folder-open"></i> {{catFilter}}
-		{{else}}
-		<span class="filter-left" title="'{{tagFilter}}' tag">
-			<i class="fa fa-tag"></i> {{tagFilter}}
-		{{/if}}
-		</span>
-		<span class="filter-right">
-			<a href="/projects.html" title="Remove filter" data-nav>
-				<i class="fa fa-times"></i>
-			</a>
+		{{~#if catFilter~}}
+		<span class="filter-left" title="'{{catFilter}}' category"><i class="fa fa-folder-open"></i> {{catFilter}}
+		{{~else~}}
+		<span class="filter-left" title="'{{tagFilter}}' tag"><i class="fa fa-tag"></i> {{tagFilter~}}
+		{{~/if~}}
+		</span><span class="filter-right"><a href="/projects.html" title="Remove filter" data-nav><i class="fa fa-times"></i></a>
 		</span>
 	</div>
 	{{/if}}
