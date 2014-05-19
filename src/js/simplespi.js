@@ -194,7 +194,7 @@ var urlmodule = (function() {
   return {
     /** Returns the current url */
     currentUrl: function() {
-      return str_2_url2(window.location.pathname.substr(1), window.location.search.substr(1));
+      return str_2_url2(window.location.pathname, window.location.search.substr(1));
     },
     /** Converts a string to url */
     str_2_url: function(str) {
