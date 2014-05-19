@@ -5,6 +5,8 @@ $pink_bright: #E7A9D0;
 $pink_dark: #9B718B;
 $orangish: #d15136;
 
+$footer_height: 96px;
+
 $threshold_desktop: 1024px;
 $threshold_tablet: 800px;
 $threshold_mobile: 500px;
@@ -219,11 +221,21 @@ ul {
 #footer {
 	background-color: $blue;
 	color: white;
+	height: $footer_height;
 }
 .footer-inner {
 	padding: 1rem 2rem;
 }
 
+.container-div-wrapper {
+	min-height: 100%;
+	margin-bottom: -$footer_height;
+}
+.container-div-wrapper:after {
+	content: "";
+  display: block;
+  height: $footer_height;
+}
 #content-div {
 	max-width: 800px;
 }
