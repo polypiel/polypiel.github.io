@@ -1,7 +1,7 @@
 /**
  * Array of active projects
  */
-active_projects = ["fairycave", "casataller", "dlp", "fartfighter", "damian", "dblog", "llf", "sp", "kde", "angel"];
+active_projects = ["pickitup", "fairycave", "casataller", "dlp", "fartfighter", "damian", "dblog", "llf", "sp", "kde", "angel"];
 
 /**
  * Each project has the following attributes:
@@ -15,6 +15,20 @@ active_projects = ["fairycave", "casataller", "dlp", "fartfighter", "damian", "d
  * @images List of images (img, thumb and title)
  */
 projects = {
+	"pickitup": {
+		"name": "Pickitup!",
+		"desc": "A personal found coins manager",
+		"category": "web",
+		"date": "Aug 2014",
+		"tags": ["ruby on rails"],
+		"long_desc": [],
+		"links": [
+			{"url": "http://pickitup-ror.herokuapp.com", "text": "Pickitup!"},
+			{"url": "https://github.com/polypiel/pickitup", "text": "Project", "type": "github"} 
+		],
+		"images": [{"img": "pickitup01.png", "title": "Coin found registering screen"}]
+	},
+
 	"maktub": {
 		"name": "Maktub Traducciones",
 		"desc": "Profesional traslation services web page",
