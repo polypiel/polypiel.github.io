@@ -4,7 +4,6 @@
  *
  * Options:
  *     toload       The css expresion of the element to load, default: #content
- *     container    The container element, default: body
  *
  * Callbacks:
  *     beforeNavigate    It's called just before loading the content
@@ -19,8 +18,7 @@
     AFTER_NAVIGATE_EVENT: "simplespi.afterNavigate",
 
     defaults: {
-      toLoad: "#content",
-      container: $('body')
+      toLoad: "#content"
     },
 
     /**
