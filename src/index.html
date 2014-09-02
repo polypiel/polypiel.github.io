@@ -11,7 +11,7 @@ layout: default
   	<header><h2>Entries</h2></header>
 	  <ul class="blog-entries">
 		  {% for post in site.posts %}
-		    <li><span>{{ post.date | date: "%D"}}</span> <a href="{{ post.url }}" data-nav>{{ post.title }}</a></li>
+		    <li><span>{{ post.date | date: "%d/%m/%Y"}}</span> <a href="{{ post.url }}" data-nav>{{ post.title }}</a></li>
 		  {% endfor %}
 		</ul>
   </section>
