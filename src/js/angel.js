@@ -49,6 +49,10 @@ var Angel = {
 		  }
 		  return ret;
 		});
+		//
+		Handlebars.registerHelper('escape', function(text) {
+	  	return encodeURIComponent(text);
+		});
 	},
 
 	/**
