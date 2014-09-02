@@ -18,10 +18,13 @@ projects = {
 	"pickitup": {
 		"name": "Pickitup!",
 		"desc": "A personal found coins manager",
-		"category": "web",
+		"category": "web-app",
 		"date": "Aug 2014",
-		"tags": ["ruby on rails"],
-		"long_desc": [],
+		"tags": ["ruby on rails", "bootstrap", "heroku"],
+		"long_desc": [
+			"Pickitup! lets you to hava an register of your found coins. Also, brings the possiblity of having friends recollecting coins for you.",
+			"It has been developed in Ruby using Ruby on Rails 4.1 as a web framework. Twitter Bootstrap is used as a HTML5 framework, using responsive design in order to be mobile friendly. Finally, it is deployed on Heroku."
+		],
 		"links": [
 			{"url": "http://pickitup-ror.herokuapp.com", "text": "Pickitup!"},
 			{"url": "https://github.com/polypiel/pickitup", "text": "Project", "type": "github"} 
@@ -31,12 +34,14 @@ projects = {
 
 	"maktub": {
 		"name": "Maktub Traducciones",
-		"desc": "Profesional traslation services web page",
+		"desc": "Professional traslation services web page",
 		"category": "web",
 		"date": "May 2014",
-		"tags": ["bootstrap", "responsive"],
+		"tags": ["responsive"],
 		"long_desc": [],
-		"links": [],
+		"links": [
+			{"url": "http://maktubtraducciones.com", "title": "Web"}
+		],
 		"images": []
 	},
 
