@@ -25,8 +25,8 @@
 				<p>{{desc}}</p>
 			</div>
 			<div class="project-tags">
-				<span class="cat"><a href="/projects.html?c={{category}}" title="Filter by '{{category}}' category" data-nav>{{category}}</a></span>
-				{{#each tags}}<span class="tag"><a href="/projects.html?t={{this}}" title="Filter by '{{this}}' tag" data-nav>{{this}}</a></span>{{/each}}
+				<span class="cat"><a href="/projects.html?c={{escape category}}" title="Filter by '{{category}}' category" data-nav>{{category}}</a></span>
+				{{#each tags}}<span class="tag"><a href="/projects.html?t={{escape this}}" title="Filter by '{{this}}' tag" data-nav>{{this}}</a></span>{{/each}}
 			</div>
 		</div>
 	{{/eachProject}}
