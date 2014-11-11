@@ -151,7 +151,7 @@ ul {
 .bullet-list {
 	list-style: none;
 	li {
-		list-style: nonarticlee;
+		list-style: none;
 		padding-left: 1.5rem;
 	}
 	li:before {
@@ -429,12 +429,6 @@ only screen and (max-device-width: 900px) and (orientation: landscape) {
 .size-1of1 { width: 100%; }
 .size-1of2 { width: 50%; }
 .size-1of3 { width: 33.333%; }
-[data-columns]::before {
-    position: absolute;
-    right: 9999em;
-    bottom: 9999em;
-    visibility: hidden;
-}
 
 .project-title {
 	font-weight: bold;
