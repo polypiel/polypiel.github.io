@@ -5,6 +5,18 @@
       name: "Work Experience"
       entries:
         -
+          start: Sep 2014
+          role: Software Engineering
+          company:
+            name: Tuenti
+            url: http://corporate.tuenti.com
+            location: "Madrid, Spain"
+          tags:
+            - "Java"
+            - "PHP"
+            - "Testing"
+          desc:
+        -
           start: "Oct 2009"
           end: "Aug 2012"
           role: "Analyst-developer"
