@@ -16,3 +16,4 @@ yui-compressor _build/js/handlebars-v2.0.0.js -o _build/js/handlebars-v2.0.0.js
 yui-compressor _build/css/animate-custom.css -o _build/css/animate-custom.css
 yui-compressor _build/css/magnific-popup.css -o _build/css/magnific-popup.css
 yui-compressor _build/css/normalize.css -o _build/css/normalize.css
+yui-compressor _build/css/angel.css -o _build/css/angel.css
