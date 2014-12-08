@@ -4,12 +4,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width">
 
-		<title>Angel Calvo's Website</title>
+		<title>{% title %}</title>
+{% if page.title %}    <meta name="description" content="{{page.desc}}" />{% endif %}
 		<!-- CSS -->
-		<link href="/css/normalize.css" rel="stylesheet" />
-		<link href="/css/angel.css" rel="stylesheet" />
-		<link href="/css/animate-custom.css" rel="stylesheet" />
-		<link href="/css/magnific-popup.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="/css/angel.css">
+		<link rel="stylesheet" type="text/css" href="/css/animate-custom.css">
+		<link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700' rel='stylesheet' type='text/css'>
@@ -30,8 +31,10 @@
 					</div>
 
 					<div id="title-div">
-						<h1><a href="/index.html" data-nav title="Home">Angel Calvo</a></h1>
-						<span class="subtitle">Developer</span><br/>
+						<span class="title"><a href="/index.html" data-nav title="Home">Angel Calvo</a></span>
+						<br/>
+						<span class="subtitle">Developer</span>
+						<br/>
 						<ul class="social-links social-links-small">
 							<li><a href="https://github.com/polypiel" target="_blank" title="Github profile"><i class="fa fa-github"></i></a></li>
 							<li><a href="http://stackoverflow.com/users/622772/polypiel" target="_blank" title="Stack Overflow profile"><i class="fa fa-stack-overflow"></i></a></li>
@@ -54,7 +57,9 @@
 			<section id="content">
 				<div class="container-div-wrapper">
 					<div id="container-div" class="header-body animated">
-						{{ content }}
+						<div id="content-div" data-pageinfo-title="{% title %}" data-pageinfo-desc="{{page.desc}}">
+							{{ content }}
+						</div>
 					</div>
 				</div>
 

@@ -90,9 +90,10 @@ projects = {
 		"desc": "Fantasy clothing and jewelry website.",
 		"long_desc": [
 			"The site uses Wordpress as CMS with a theme created from scratch. It's also ready for mobiles and tablets.",
+			"The shop uses the Etsy API for loading the catalogue dynamically."
 		],
 		"tags": ["wordpress", "responsive"],
-		"links": [{"url": "http://beta.fairycave.net", "text": "Fairy Cave"} ],
+		"links": [{"url": "http://fairycave.net", "text": "Fairy Cave"} ],
 		"images": [
 			{"img": "fairycave01.png", "title": "Home page"},
 			{"img": "fairycave02.png", "title": "DaWanda shop integration"},

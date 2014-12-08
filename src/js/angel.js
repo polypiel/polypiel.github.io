@@ -127,7 +127,17 @@ var Angel = {
 		}
 
 		// Magnific Popup
-		$('.project-photos').magnificPopup({ delegate: 'a', type: 'image', gallery:{enabled:true} });
+		$('.project-photos').magnificPopup({ delegate: 'a', type: 'image', gallery: {enabled: true} });
+
+		// Page info
+		var title = $('#content-div').data('pageinfo-title');
+		if (typeof title !== undefined) {
+			$('title').text(title);
+		}
+		var desc = $('#content-div').data('pageinfo-desc');
+		if (typeof desc !== undefined) {
+			$('meta[name=description]').attr('content', desc);
+		}
 	},
 
 	// sspi events
