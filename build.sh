@@ -8,6 +8,7 @@ while getopts ":hp" opt; do
       ;;
     p ) # process option t
       SASS_FGS="--style compressed"
+      JEKYLL_ENV="prod"
       ;;
   esac
 done
