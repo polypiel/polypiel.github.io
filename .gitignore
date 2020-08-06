@@ -3,3 +3,4 @@ _build/
 *.sublime-workspace
 .sass-cache/
 src/css/angel.css
+src/css/angel.css.map
