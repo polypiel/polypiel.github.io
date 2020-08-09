@@ -74,10 +74,6 @@ $threshold-mobile: 500px;
 		padding: 0.2rem 1rem;
 		margin-right: 1rem;
 	}
-	#profile-div {
-		float: left;
-		margin-right: 2rem;
-	}
 	.header-body {
 		padding: 2rem;
 	}
@@ -331,14 +327,6 @@ ul {
 // TITLES
 .section-inner {
 	max-width: 800px;
-}
-
-.profile-img {
-	width: 128px;
-	height: 128px;
-	border-radius: .5rem;
-	-webkit-border-radius: .5rem;
-	-moz-border-radius: .5rem;
 }
 
 // CV
