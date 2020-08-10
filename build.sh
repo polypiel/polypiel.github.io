@@ -7,6 +7,7 @@ while getopts ":hp" opt; do
       echo "\tUse -p for production build"
       ;;
     p ) # process option t
+      echo "Building for prod..."
       SASS_FGS="--style compressed"
       JEKYLL_ENV="prod"
       ;;
@@ -14,18 +15,20 @@ while getopts ":hp" opt; do
 done
 
 
-# Compile and  minifies CSSs
-for f in `ls src/css/*.scss`; do
-  sass --update $f:${f%.scss}.css $SASS_FGS
-done
-
 # Build site
 jekyll build
 
+# Compile SCSS
+for f in `ls src/css/*.scss`; do
+  sass --update $f:${f%.scss}.css --sourcemap=none $SASS_FGS
+done
 
 if [ ! -z  "$SASS_FGS" ]
 then
-	# Minifies CSS files
-	yui-compressor _build/css/normalize.css -o _build/css/normalize.css
-	yui-compressor _build/css/angel.css -o _build/css/angel.css
+  # Minifies CSS files
+  yui-compressor _build/css/angel.css -o _build/css/angel.css
+  
+  # Clean stuff
+  rm _build/css/angel.scss
+  rm _build/css/angel.css.map
 fi
