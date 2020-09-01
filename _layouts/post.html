@@ -10,7 +10,7 @@ layout: default
 	{{ content }}
 </article>
 
-<nav>
-	{% if page.next %}<a href="{{page.next.url}}" title="Next article" data-nav><i class="fa fa-angle-left"></i> Next</a> {% endif %}
-	{% if page.previous %}<a href="{{page.previous.url}}" title="Previous article" data-nav><i class="fa fa-angle-right"></i> Previous</a>{% endif %}
+<nav class="post-nav">
+	{% if page.previous %}<a href="{{page.previous.url}}" title="Previous post"><i class="fa fa-caret-left"></i> Previous</a>{% endif %}
+	{% if page.next %}<a href="{{page.next.url}}" title="Next post" class="post-nav-next">Next <i class="fa fa-caret-right"></i></a> {% endif %}
 </nav>

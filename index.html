@@ -9,12 +9,12 @@ desc: Angel Calvo's personal site.
   </header>
 	<p class="summary">Check my stuff in <a href="https://github.com/polypiel" title="Github">Github</a>.</p>
 
-  <!--section>
+  <section>
   	<header><h2>Entries</h2></header>
 	  <ul class="blog-entries">
 		  {% for post in site.posts %}
-		    <li><span>{{ post.date | date: "%d/%m/%Y"}}</span> <a href="{{ post.url }}" data-nav>{{ post.title }}</a></li>
+		    <li><span>{{ post.date | date: "%d/%m/%Y"}}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
 		  {% endfor %}
 		</ul>
-  </section-->
+  </section>
 </article>

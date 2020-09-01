@@ -4,3 +4,4 @@ _build/
 .sass-cache/
 src/css/angel.css
 src/css/angel.css.map
+_site/
